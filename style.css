@@ -1,5 +1,5 @@
 body {
-    background-color: darkblue;
+    background-image: url("dragon.jpg");
 }
 
 #text {
@@ -11,15 +11,40 @@ body {
 #game {
   max-width: 500px;
   max-height: 400px;
-  background-color: lightgray;
-  color: white;
+  background-color: #8679c0; 
+  color: #ad7d7d;
   margin: 0 auto;
-  padding: 10px;
+  padding: 20px; 
+  border-radius: 10px; 
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
+  font-family: cursive;
+  font-size: 16px;
+  opacity: 0.5;
 }
+
+#game:hover {
+  transform: scale(1.05); 
+  transition: transform 0.3s ease-in-out;
+}
+
 
 #controls {
   border: 1px black solid;
   padding: 5px;
+}
+
+#button1, #button2, #button3 {
+  border-radius: 10px;
+  font-family: cursive;
+  font-size: 14px;
+  background-color: #cdf712;
+  margin: auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+#button1:hover, #button2:hover, #button3:hover {
+  transform: scale(1.05); 
+  transition: transform 0.3s ease-in-out;
 }
 
 #stats {
@@ -38,4 +63,10 @@ body {
 
 .stat {
   padding-right: 10px;
+}
+
+#location {
+  border: 1px black solid;
+  color: black;
+  padding: 5px;
 }
