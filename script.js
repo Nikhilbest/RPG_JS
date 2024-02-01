@@ -80,7 +80,7 @@ const locations = [
     {
         name: "fight",
         "button text": ["Attack", "Dodge", "Run"],
-        "button function": [attack, dodge, goTown],
+        "button functions": [attack, dodge, goTown],
         text: "You are fighting a monster.",
         lo: "Fighting arena"
     },
@@ -103,8 +103,15 @@ const locations = [
         "button text": ["Replay?", "Replay?", "Replay?"],
         "button functions": [restart, restart, restart],
         text: "You defeated the dragon! YOU WIN THE GAME! 🐱‍🏍",
-        lo: "huge applause from crowd"
-    }
+        lo: "Victory belongs to us!"
+    },
+    {
+        name: "Fight dragon",
+        "button text": ["Attack", "Dodge", "Run"],
+        "button functions": [attack, dodge, goTown],
+        text: "You are fighting a dragon.",
+        lo: "Dragon den"
+    },
 ];
 
 button1.onclick = goStore;
@@ -197,7 +204,12 @@ function fightDragon() {
 }
 
 function goFight() {
-    update(locations[3]);
+    if (fighting==2){
+        update(locations[7]);
+    }
+    else{
+        update(locations[3]);
+    }
     monsterHealth = monsters[fighting].health;
     monsterStats.style.display = "block";
     monsterNameText.innerText = monsters[fighting].name;
